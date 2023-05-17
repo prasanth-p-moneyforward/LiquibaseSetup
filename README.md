@@ -1,3 +1,22 @@
+なぜリキベースなのか？
+Liquibase は、データベースの変更を簡単に追跡できる DB 移行ツールです。
+Liquibase は Spring Boot と簡単に統合でき、移行に追加のコードは必要ありません。
+それはどのようにして起こるのでしょうか？
+
+a) いくつかのテーブルを使用します
+1) DATABASECHANGELOG: このテーブルは、変更された SQL ファイルを追跡します。
+2) DATABASECHANGELOGLOCK: このテーブルは、移行プロセス中にデータベースをロックする必要があるかどうかを維持します。
+
+移行のプロセス:
+1) src/main/resources にフォルダー db/changelog を作成します。
+2) ファイルchangelog-master.xmlを作成します --> このファイルは、すべての移行SQLファイルにアクセスするためのマスターファイルです。
+3) 次に、テーブルを変更したいと思います。簡単な手順に従う必要があります。
+4) db/changelog 内に新しい移行用のフォルダーを作成します。
+5) SQL ファイルをフォルダーに追加します。ロールバックが必要な場合は、ロールバック ファイルも作成できます。
+6) 完了
+7) スプリング ブートを使用してアプリを実行すると、アプリは移行されます。
+
+
 Why Liquibase?
 Liquibase is a DB Migration tool using which you are given an opportunity to track the Databases changes with ease.
 Liquibase can be easily integrated with Spring Boot no additional code required for migration.
