@@ -23,7 +23,7 @@ Liquibase can be easily integrated with Spring Boot no additional code required 
 How it happens?
 
 a) It uses couple of tables
-1) DATABASECHANGELOG: This table tracks the SQL Files that have been change.
+1) DATABASECHANGELOG: This table tracks the SQL Files that have been changed.
 2) DATABASECHANGELOGLOCK: This table maintains if the database has to be locked during process of migration.
 
 Process of Migration:
