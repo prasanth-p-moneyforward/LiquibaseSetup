@@ -34,3 +34,4 @@ Process of Migration:
 5) Add your sql file in the folder and if rollback is required you can create a rollback file as well.
 6) Done
 7) If you run the app using a spring boot then it will be migrated.
+8) You can manually verify that is code is proper by runningin DBvearer or running the script again.
